@@ -13,9 +13,7 @@ const client = new Client({
 
 new CommandKit({
   client,
-  commandsPath: path.join(__dirname, 'commands'),
   eventsPath: path.join(__dirname, 'events'),
-  validationsPath: path.join(__dirname, 'validations'),
   devUserIds: ['710549603216261141'],
   skipBuiltInValidations: true,
   bulkRegister: true
