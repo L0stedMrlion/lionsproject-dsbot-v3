@@ -19,4 +19,9 @@ new CommandKit({
   bulkRegister: true
 })
 
-client.login(process.env.TOKEN)
+try {
+  client.login(process.env.TOKEN)
+} catch (error) {
+  console.error('Error occurred:', error)
+  client.destroy()
+}
