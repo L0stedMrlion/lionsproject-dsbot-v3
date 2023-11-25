@@ -1,1 +1,2 @@
-import {} from "discord.js";
+import 'dotenv/config'
+import { Client } from 'discord.js'
