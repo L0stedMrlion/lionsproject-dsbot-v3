@@ -1,1 +1,1 @@
-FIX /joke command, not working rn
+FIX /joke command, not working rn - in progress
