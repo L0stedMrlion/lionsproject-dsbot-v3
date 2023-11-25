@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { Client, GatewayIntentBits } from 'discord.js'
 import { CommandKit } from 'commandkit'
-import path from 'path'
+import * as path from 'path'
 
 const client = new Client({
   intents: [
