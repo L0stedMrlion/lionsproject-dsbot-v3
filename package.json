@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Mrlion",
-  "license": "MIT",
+  "license": "Mozilla Public License 2.0",
   "dependencies": {
     "commandkit": "^0.1.6",
     "discord.js": "^14.14.1",
