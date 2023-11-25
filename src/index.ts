@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import { Client, IntentsBitField } from 'discord.js'
-import mongoose from 'mongoose'
+import eventHandler = require('./handlers/eventHandler')
 
 const client = new Client({
   intents: [
