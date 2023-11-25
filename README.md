@@ -12,6 +12,4 @@ This bot it RELEASE 3.0 of our Discord bot. Bot is made in Typescript, not in JS
 
 `npm install -D tsc @types/node` - Addon to make development easier
 
-## 🌿 Database (MongoDB)
-
-We use for this project MongoDB, we are thinking about changing to redis as our main DB. What do you think about it? 👀
+`npm install --save-dev eslint` - ESLinter for check errors
