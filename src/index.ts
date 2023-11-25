@@ -16,8 +16,7 @@ new CommandKit({
   commandsPath: path.join(__dirname, 'commands'),
   eventsPath: path.join(__dirname, 'events'),
   devUserIds: ['710549603216261141'],
-  skipBuiltInValidations: true,
-  bulkRegister: true
+  skipBuiltInValidations: true
 })
 
 try {
