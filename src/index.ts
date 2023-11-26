@@ -1,13 +1,14 @@
 import 'dotenv/config'
-import { Client, GatewayIntentBits } from 'discord.js'
+import { Client, IntentsBitField } from 'discord.js'
 import { CommandKit } from 'commandkit'
 import * as path from 'path'
 
 const client = new Client({
   intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent
+    IntentsBitField.Flags.Guilds,
+    IntentsBitField.Flags.GuildMembers,
+    IntentsBitField.Flags.GuildMessages,
+    IntentsBitField.Flags.MessageContent
   ]
 })
 
