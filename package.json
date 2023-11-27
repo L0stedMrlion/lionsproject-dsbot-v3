@@ -2,12 +2,12 @@
   "name": "lionsproject-dsbot-v3",
   "version": "RELEASE 3.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node .",
-    "lint": "eslint dist/**"
+    "lint": "eslint build/**"
   },
   "keywords": [],
   "author": "Mrlion",
