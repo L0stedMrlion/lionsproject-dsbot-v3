@@ -17,7 +17,7 @@ new CommandKit({
   client,
   commandsPath: path.join(__dirname, 'commands'),
   eventsPath: path.join(__dirname, 'events'),
-  devUserIds: [`${author_id}`] // Mrlion for dev cmds
+  devUserIds: [`${author_id}`] // Mrlion for dev cmds // set in command properties
 })
 
 try {
