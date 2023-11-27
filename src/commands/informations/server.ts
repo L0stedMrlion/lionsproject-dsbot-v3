@@ -7,6 +7,8 @@ export const data: CommandData = {
 }
 
 export function run({ interaction, client }: SlashCommandProps) {
+  const { guild } = interaction
+
   if (!interaction.inGuild) interaction.reply('You can use this command only in guild/server!')
   return
 
