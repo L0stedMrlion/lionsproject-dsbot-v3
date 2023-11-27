@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import { Client, IntentsBitField } from 'discord.js'
 import { CommandKit } from 'commandkit'
+import { mongoose } from 'mongoose'
 import * as path from 'path'
 import { author_id } from '../config.json'
 
@@ -21,6 +22,10 @@ new CommandKit({
 })
 
 try {
+  mongoose.set('strictQuery', false)
+  await mongoose.connect(process.env.MONGODB_URI)
+  console.log('Connected to DB.')
+
   client.login(process.env.TOKEN)
 } catch (error) {
   console.log('❗ Error just occured', error)
