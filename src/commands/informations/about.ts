@@ -1,5 +1,6 @@
 import type { CommandData, SlashCommandProps } from 'commandkit'
 import { EmbedBuilder } from 'discord.js'
+import { author_id, author_name } from '../../../config.json'
 
 export const data: CommandData = {
   name: 'about',
@@ -11,11 +12,11 @@ export function run({ client, interaction }: SlashCommandProps) {
     .setTitle('🦁 LionBot')
     .setDescription(
       `Hello, I'm LionBot 🦁!
-       I'm activly developed by Mrlion and I'm made in discord.js v14.
+       I'm activly developed by ${author_name} and I'm made in discord.js v14.
       
        You can find my code written in **Typescript** on Mrlion's [Github](https://github.com/L0stedMrlion/lionsproject-dsbot-v3)!
        
-       You can send feedback about me to <@710549603216261141>!`
+       You can send feedback about me to <@${author_id}>!`
     )
     .setColor('#CDAC01')
     .setThumbnail(
