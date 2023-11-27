@@ -22,11 +22,11 @@ new CommandKit({
 })
 ;(async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URI)
-    console.log('Connected to DB.')
+    await mongoose.connect(process.env.MONGODB)
+    console.log('🌿 Connected to DB.')
 
     await client.login(process.env.TOKEN)
   } catch (error) {
-    console.error('Error:', error)
+    console.error('❗ Error', error)
   }
 })()
