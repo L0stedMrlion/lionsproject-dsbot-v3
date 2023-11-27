@@ -1,6 +1,6 @@
 import type { CommandData, SlashCommandProps } from 'commandkit'
 import { EmbedBuilder } from 'discord.js'
-import { author_id, author_name } from '../../../config.json'
+import { author_id, author_name, stable_bot_version } from '../../../config.json'
 
 export const data: CommandData = {
   name: 'about',
@@ -14,7 +14,7 @@ export function run({ client, interaction }: SlashCommandProps) {
       `Hello, I'm LionBot 🦁!
        I'm activly developed by ${author_name} and I'm made in discord.js v14.
       
-       You can find my code written in **Typescript** on Mrlion's [Github](https://github.com/L0stedMrlion/lionsproject-dsbot-v3)!
+       You can find my code written in **Typescript** on Mrlion's [Github](https://github.com/L0stedMrlion/lionsproject-dsbot-v3)! This is version ${stable_bot_version}.
        
        You can send feedback about me to <@${author_id}>!`
     )
