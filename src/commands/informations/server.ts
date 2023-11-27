@@ -7,6 +7,7 @@ export const data: CommandData = {
 }
 
 export function run({ interaction, client, handler }: SlashCommandProps) {
+  interaction.reply('📊 Getting stats please wait...')
   const stats = new EmbedBuilder()
     .setTitle("🦁 Lion's Project™")
     .setDescription(`You can find here some stats`)
