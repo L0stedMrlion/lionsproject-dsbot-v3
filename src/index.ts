@@ -1,10 +1,11 @@
 import 'dotenv/config'
 import { Client, IntentsBitField } from 'discord.js'
 import { CommandKit } from 'commandkit'
-import { mongoose } from 'mongoose'
+import { MongoClient } from 'mongodb'
 import * as path from 'path'
 import { author_id } from '../config.json'
 
+const mongoose = new MongoClient('process.env.MONGODB')
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
@@ -22,7 +23,7 @@ new CommandKit({
 })
 ;(async () => {
   try {
-    await mongoose.connect(process.env.MONGODB)
+    await mongoose.connect
     console.log('🌿 Connected to DB.')
 
     await client.login(process.env.TOKEN)
