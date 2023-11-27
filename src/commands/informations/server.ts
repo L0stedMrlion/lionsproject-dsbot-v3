@@ -6,8 +6,6 @@ export const data: CommandData = {
   description: '📊 Send you some info about our server'
 }
 
-const membersCount = client.guilds.first().members.count()
-
 export function run({ interaction, client, handler }: SlashCommandProps) {
   const server = new EmbedBuilder()
     .setTitle("🦁 Lion's Project™")
