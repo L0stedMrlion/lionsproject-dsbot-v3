@@ -10,8 +10,14 @@ export function run({ client, interaction }: SlashCommandProps) {
   const about = new EmbedBuilder()
     .setTitle('🦁 LionBot')
     .setDescription(
-      `Hello, I'm LionBot. I'm activly developed by Mrlion and I'm made in discord.js v14.`
+      `Hello, I'm LionBot 🦁!
+       I'm activly developed by Mrlion and I'm made in discord.js v14.
+      
+       You can find my code written in **Typescript** on Mrlion's [Github](https://github.com/L0stedMrlion/lionsproject-dsbot-v3)!
+       
+       You can send feedback about me to <@710549603216261141>!`
     )
+    .setColor('#CDAC01')
     .setFooter({
       text: "🦁 Lion's Project™ © 2023",
       iconURL:
