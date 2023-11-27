@@ -18,16 +18,16 @@ new CommandKit({
   client,
   commandsPath: path.join(__dirname, 'commands'),
   eventsPath: path.join(__dirname, 'events'),
-  devUserIds: [`${author_id}`] // Mrlion for dev cmds // set in command properties
+  devUserIds: [author_id] // Mrlion for dev cmds // set in command properties
 })
+;(async () => {
+  try {
+    mongoose.set('strictQuery', false)
+    await mongoose.connect(process.env.MONGODB_URI)
+    console.log('Connected to DB.')
 
-try {
-  mongoose.set('strictQuery', false)
-  await mongoose.connect(process.env.MONGODB_URI)
-  console.log('Connected to DB.')
-
-  client.login(process.env.TOKEN)
-} catch (error) {
-  console.log('❗ Error just occured', error)
-  client.destroy()
-}
+    await client.login(process.env.TOKEN)
+  } catch (error) {
+    console.error('Error:', error)
+  }
+})()
