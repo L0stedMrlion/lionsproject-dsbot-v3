@@ -2,6 +2,7 @@ import 'dotenv/config'
 import { Client, IntentsBitField } from 'discord.js'
 import { CommandKit } from 'commandkit'
 import * as path from 'path'
+import { author_id } from '../config.json'
 
 const client = new Client({
   intents: [
@@ -16,7 +17,7 @@ new CommandKit({
   client,
   commandsPath: path.join(__dirname, 'commands'),
   eventsPath: path.join(__dirname, 'events'),
-  devUserIds: ['710549603216261141'] // Mrlion
+  devUserIds: [`${author_id}`] // Mrlion for dev cmds
 })
 
 try {
