@@ -22,6 +22,5 @@ new CommandKit({
 try {
   client.login(process.env.TOKEN)
 } catch (error) {
-  console.error('❗ Error just occurred', error)
   client.destroy()
 }
