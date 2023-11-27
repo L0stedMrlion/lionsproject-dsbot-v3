@@ -1,5 +1,5 @@
 import type { CommandData, SlashCommandProps } from 'commandkit'
-import { Client, EmbedBuilder } from 'discord.js'
+import { Client, EmbedBuilder, Guild } from 'discord.js'
 
 export const data: CommandData = {
   name: 'server',
@@ -7,6 +7,9 @@ export const data: CommandData = {
 }
 
 export function run({ interaction, client }: SlashCommandProps) {
+  if (!interaction.inGuild) interaction.reply('You can use this command only in guild/server!')
+  return
+
   interaction.reply('📊 Getting stats please wait...')
   const stats = new EmbedBuilder()
     .setTitle("🦁 Lion's Project™")
