@@ -17,7 +17,13 @@ new CommandKit({
   client,
   commandsPath: path.join(__dirname, 'commands'),
   eventsPath: path.join(__dirname, 'events'),
-  devUserIds: [mrlion_id]
+  devUserIds: [mrlion_id],
+  devRoleIds: [
+    '1092013060983640084',
+    '1176940127499595817',
+    '1167143976302805093',
+    '1092013063089172532'
+  ]
 })
 ;(async () => {
   try {
