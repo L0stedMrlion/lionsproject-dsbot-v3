@@ -1,4 +1,4 @@
-[![wakatime](https://wakatime.com/badge/user/018c057c-f59f-43b2-b353-6cd96456370f/project/018c0693-806f-478a-abb2-3efabdbb3155.svg)](https://wakatime.com/badge/user/018c057c-f59f-43b2-b353-6cd96456370f/project/018c0693-806f-478a-abb2-3efabdbb3155?style=flat)
+[![wakatime](https://wakatime.com/badge/github/L0stedMrlion/lionsproject-dsbot-v3.svg)](https://wakatime.com/badge/github/L0stedMrlion/lionsproject-dsbot-v3)
 
 # 🦁 Lion's Project™ - Discord v3
 
