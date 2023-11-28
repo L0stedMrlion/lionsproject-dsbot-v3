@@ -31,4 +31,5 @@ To run this bot, you will need to install the following extensions and dependenc
   npm install --save-dev eslint
   ```
 
-Feel free to reach out if you have any questions or need further assistance. Happy coding! 🚀
+Feel free to reach out if you have any questions or need further assistance. 
+Happy coding! 🚀
