@@ -1,6 +1,6 @@
 import type { CommandData, SlashCommandProps } from 'commandkit'
 import { EmbedBuilder } from 'discord.js'
-import { author_id, author_name, stable_bot_version } from '../../../config.json'
+import { mrlion_id, author_name, stable_bot_version } from '../../../config.json'
 
 export const data: CommandData = {
   name: 'about',
