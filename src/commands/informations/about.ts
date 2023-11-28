@@ -16,7 +16,7 @@ export function run({ client, interaction }: SlashCommandProps) {
       
        You can find my code written in **Typescript** on Mrlion's [Github](https://github.com/L0stedMrlion/lionsproject-dsbot-v3)! This is version **${stable_bot_version}**.
        
-       You can send feedback about me to <@${author_id}>!`
+       You can send feedback about me to <@${mrlion_id}>!`
     )
     .setColor('#CDAC01')
     .setThumbnail(
