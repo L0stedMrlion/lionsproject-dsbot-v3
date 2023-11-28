@@ -1,6 +1,6 @@
 {
   "name": "lionsproject-dsbot-v3",
-  "version": "RELEASE 3.0",
+  "version": "RELEASE 3.0 (Tested)",
   "description": "",
   "main": "build/src/index.js",
   "scripts": {
