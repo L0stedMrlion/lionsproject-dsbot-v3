@@ -32,6 +32,6 @@ new CommandKit({
   try {
     await client.login(token)
   } catch (error) {
-    console.error('❗ Error', error)
+    console.error('❗ Error just occured', error)
   }
 })()
