@@ -12,21 +12,38 @@ export const data: CommandData = {
   description: '🫶 Test modal command for our Survival?'
 }
 
-export function run({ interaction, client, handler }: SlashCommandProps) {
+export async function run({ interaction, client, handler }: SlashCommandProps) {
   const modal = new ModalBuilder().setCustomId('myModal').setTitle('My Modal')
-  const favoriteColorInput = new TextInputBuilder()
-    .setCustomId('favoriteColorInput')
+
+  const username = new TextInputBuilder()
+    .setCustomId('username')
     .setLabel("What's your favorite color?")
     .setStyle(TextInputStyle.Short)
 
-  const hobbiesInput = new TextInputBuilder()
-    .setCustomId('hobbiesInput')
+  const informations = new TextInputBuilder()
+    .setCustomId('informations')
     .setLabel("What's some of your favorite hobbies?")
     .setStyle(TextInputStyle.Paragraph)
-  const firstActionRow = new ActionRowBuilder().addComponents(favoriteColorInput)
-  const secondActionRow = new ActionRowBuilder().addComponents(hobbiesInput)
 
-  modal.addComponents(firstActionRow, secondActionRow)
+  const firstActionRow = new ActionRowBuilder().addComponents(username)
+  const secondActionRow = new ActionRowBuilder().addComponents(informations)
 
-  interaction.showModal(modal)
+  await interaction.showModal(modal)
+
+  const submittedModal = await interaction.awaitModalSubmit({
+    modalId: 'myModal',
+    filter: (interaction) => interaction.user.id === interaction.user.id,
+    timeout: 60000
+  })
+
+  if (submittedModal) {
+    const usernameInput = submittedModal.components[0].components[0].value
+    const informationsInput = submittedModal.components[1].components[0].value
+
+    interaction.reply(
+      `Your favorite color is ${usernameInput} and your hobbies are ${informationsInput}`
+    )
+  } else {
+    interaction.reply('You did not submit the modal')
+  }
 }
