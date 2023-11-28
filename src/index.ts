@@ -15,12 +15,11 @@ const client = new Client({
 })
 
 new CommandKit({
-  client, // Reference to the Discord client object
-  commandsPath: path.join(__dirname, 'commands'), // Path to the commands directory
-  eventsPath: path.join(__dirname, 'events'), // Path to the events directory
-  devUserIds: [mrlion_id], // Array of developer user IDs
+  client,
+  commandsPath: path.join(__dirname, 'commands'),
+  eventsPath: path.join(__dirname, 'events'),
+  devUserIds: [mrlion_id],
   devRoleIds: [
-    // Array of developer role IDs
     '1092013060983640084', // * Project Founder
     '1176940127499595817', // * Project Team Leader
     '1167143976302805093', // * Project Team Member
