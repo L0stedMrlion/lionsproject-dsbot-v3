@@ -19,11 +19,11 @@ new CommandKit({
   eventsPath: path.join(__dirname, 'events'),
   devUserIds: [mrlion_id],
   devRoleIds: [
-    '1092013060983640084',
-    '1176940127499595817',
-    '1167143976302805093',
-    '1092013063089172532'
-  ]
+    '1092013060983640084', // * Project Founder
+    '1176940127499595817', // * Project Team Leader
+    '1167143976302805093', // * Project Team Member
+    '1092013063089172532', // * Project Support
+    '1092013052288835654' // * Administrator (*)
 })
 ;(async () => {
   try {
