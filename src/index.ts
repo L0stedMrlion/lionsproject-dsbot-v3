@@ -21,8 +21,6 @@ new CommandKit({
 })
 ;(async () => {
   try {
-    //await mongoose.connect('process.env.MONGOOSE')
-    //console.log('🌿 Connected to DB.')
     await client.login(process.env.TOKEN)
   } catch (error) {
     console.error('❗ Error', error)
