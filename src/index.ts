@@ -4,8 +4,6 @@ import { CommandKit } from 'commandkit'
 import * as path from 'path'
 import { mrlion_id } from '../config.json'
 
-const token = process.env.TOKEN
-
 const client = new Client({
   intents: [
     IntentsBitField.Flags.Guilds,
@@ -30,7 +28,7 @@ new CommandKit({
 })
 ;(async () => {
   try {
-    await client.login(token)
+    await client.login(process.env.TOKEN)
   } catch (error) {
     console.error('❗ Error just occured', error)
   }
