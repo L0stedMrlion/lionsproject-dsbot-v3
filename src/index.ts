@@ -30,6 +30,6 @@ new CommandKit({
   try {
     await client.login(process.env.TOKEN)
   } catch (error) {
-    console.error('❗ Error just occured', error)
+    await console.error('❗ Error just occured', error)
   }
 })()
