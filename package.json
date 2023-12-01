@@ -1,6 +1,6 @@
 {
   "name": "lionsproject-dsbot-v3",
-  "version": "RELEASE 3.0 (Tested)",
+  "version": "RELEASE 3.0.1",
   "description": "New generation of you Discord bot.",
   "main": "build/src/index.js",
   "scripts": {
