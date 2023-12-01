@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import { Client, IntentsBitField } from 'discord.js'
 import { CommandKit } from 'commandkit'
+import {} from 'mongoose'
 import * as path from 'path'
 import { mrlion_id } from '../config.json'
 
