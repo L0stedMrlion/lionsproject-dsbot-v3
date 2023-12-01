@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import { Client, IntentsBitField } from 'discord.js'
 import { CommandKit } from 'commandkit'
-import {} from 'mongoose'
+const mongoose = require('mongoose')
 import * as path from 'path'
 import { mrlion_id } from '../config.json'
 
@@ -29,6 +29,10 @@ new CommandKit({
 })
 ;(async () => {
   try {
+    mongoose.set('strictQuery', false)
+    await mongoose.connect(process.env.MONGODB, { keepAlive: true })
+    console.log('Connected to DB.')
+
     await client.login(process.env.TOKEN)
   } catch (error) {
     await console.error('❗ Error just occured', error)
