@@ -29,10 +29,6 @@ new CommandKit({
 })
 ;(async () => {
   try {
-    mongoose.set('strictQuery', false)
-    await mongoose.connect(process.env.MONGODB, { keepAlive: true })
-    console.log('Connected to DB.')
-
     await client.login(process.env.TOKEN)
   } catch (error) {
     await console.error('❗ Error just occured', error)
