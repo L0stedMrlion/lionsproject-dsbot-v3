@@ -1,8 +1,8 @@
-import 'dotenv/config'
-import { Client, IntentsBitField } from 'discord.js'
-import { CommandKit } from 'commandkit'
-import * as path from 'path'
-import { mrlion_id } from '../config.json'
+import 'dotenv/config';
+import { Client, IntentsBitField } from 'discord.js';
+import { CommandKit } from 'commandkit';
+import * as path from 'path';
+import { mrlion_id } from '../config.json';
 
 const client = new Client({
   intents: [
@@ -11,7 +11,7 @@ const client = new Client({
     IntentsBitField.Flags.GuildMessages,
     IntentsBitField.Flags.MessageContent
   ]
-})
+});
 
 new CommandKit({
   client,
@@ -25,11 +25,11 @@ new CommandKit({
     '1092013063089172532', // * Project Support
     '1092013052288835654' // * Administrator (*)
   ]
-})
-;(async () => {
+});
+(async () => {
   try {
-    await client.login(process.env.TOKEN)
+    await client.login(process.env.TOKEN);
   } catch (error) {
-    await console.error('❗ Error just occured', error)
+    await console.error('❗ Error just occured', error);
   }
-})()
+})();
