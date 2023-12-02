@@ -4,6 +4,7 @@ import { CommandKit } from 'commandkit';
 const mongoose = require('mongoose');
 import * as path from 'path';
 import { mrlion_id } from '../config.json';
+import { version } from '../package.json';
 
 const client = new Client({
   intents: [
@@ -31,8 +32,8 @@ new CommandKit({
   try {
     mongoose.set('strictQuery', false);
     await mongoose.connect(process.env.MONGODB);
+    console.log(`🦁 LionBot - ${version}`);
     console.log('🌿 Connected to Database.');
-
     await client.login(process.env.TOKEN);
   } catch (error) {
     await console.error('❗ Error just occured', error);
